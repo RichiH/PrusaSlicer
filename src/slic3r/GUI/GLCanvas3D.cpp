@@ -2399,7 +2399,7 @@ void GLCanvas3D::on_idle(wxIdleEvent& evt)
     m_dirty |= notification_mgr->requires_render();
 #endif // ENABLE_NEW_NOTIFICATIONS_FADE_OUT 
     // FIXME
-    //m_dirty |= m_main_toolbar.update_items_state();
+    m_dirty |= m_main_toolbar.update_items_state();
     m_dirty |= m_undoredo_toolbar.update_items_state();
     m_dirty |= wxGetApp().plater()->get_view_toolbar().update_items_state();
     m_dirty |= wxGetApp().plater()->get_collapse_toolbar().update_items_state();

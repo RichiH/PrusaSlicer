@@ -1264,7 +1264,8 @@ bool GLToolbar::update_items_visibility()
 
     for (GLToolbarItem* item : m_items)
     {
-        ret |= item->update_visibility();
+        if(!item->is_separator())
+            ret |= item->update_visibility();
     }
 
     if (ret)
